@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'spork'
 require 'simplecov'
+require 'coveralls'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
@@ -8,6 +9,7 @@ Spork.prefork do
   # need to restart spork for it take effect.
   # This file is copied to spec/ when you run 'rails generate rspec:install'
   SimpleCov.start('rails')
+  Coveralls.wear!
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'

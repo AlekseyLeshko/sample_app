@@ -27,4 +27,5 @@ group :test do
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
   gem 'simplecov', require: false
+  gem 'coveralls', require: false
 end

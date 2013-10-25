@@ -1,7 +1,6 @@
 common: &common
   adapter: postgresql
-  username: sample_app_user
-  password: sample_app # from psql setup, see Postgresql
+  username: postgres
 
 development:
   <<: *common

@@ -6,5 +6,4 @@ rvm:
 
 deploy:
   provider: heroku
-  app: morning-basin-1324
-  api_key: d75dc036-e1dc-4746-9faf-7e0c71eaf6cf
+  app: chilling-headland-1960

@@ -6,4 +6,5 @@ rvm:
 
 deploy:
   provider: heroku
-  app: chilling-headland-1960
+  app: frightful-springs-5980
+  api_key: d75dc036-e1dc-4746-9faf-7e0c71eaf6cf

@@ -31,4 +31,5 @@ group :test do
   gem 'libnotify', '0.5.9'
   gem 'simplecov', require: false
   gem 'coveralls', require: false
+  gem 'factory_girl_rails', '4.1.0'
 end

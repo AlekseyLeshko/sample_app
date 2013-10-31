@@ -1,15 +1,32 @@
 require 'rubygems'
 require 'spork'
-require 'simplecov'
-require 'coveralls'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
   # This file is copied to spec/ when you run 'rails generate rspec:install'
-  SimpleCov.start('rails')
-  Coveralls.wear!
+
+  require 'simplecov'
+  if ENV["COVERAGE"]
+    SimpleCov.start do
+      add_filter '/spec/'
+      add_filter '/config/'
+      add_filter '/lib/'
+      add_filter '/vendor/'
+
+      add_group 'Controllers', 'app/controllers'
+      add_group 'Models', 'app/models'
+      add_group 'Helpers', 'app/helpers'
+      add_group 'Mailers', 'app/mailers'
+      add_group 'Views', 'app/views'
+    end  end
+
+  if ENV["TRAVIS"]
+    require 'coveralls'
+    Coveralls.wear!
+  end
+
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'

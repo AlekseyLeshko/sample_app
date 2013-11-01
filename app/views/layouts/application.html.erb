@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render "layouts/shared/head/head" %>
+    <%= render "layouts/shared/head" %>
   </head>
   <body>
     <%= render "layouts/shared/navbar" %>
-    <div class="container">
-      <%= render 'layouts/shared/flash', {flash: flash} %>
-      <%= yield %>
-      <%= render 'layouts/shared/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+    <%= render "layouts/shared/main_container" %>
   </body>
 </html>

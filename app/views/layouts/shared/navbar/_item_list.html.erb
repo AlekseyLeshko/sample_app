@@ -1,0 +1,13 @@
+<ul class="nav pull-right">
+  <li>
+    <%= link_to "Home", root_path %>
+  </li>
+  <li>
+    <%= link_to "Help", help_path %>
+  </li>
+  <% if signed_in? %>
+    <%= render "layouts/shared/navbar/signed_in" %>
+  <% else %>
+    <%= render "layouts/shared/navbar/signed_out" %>
+  <% end %>
+</ul>

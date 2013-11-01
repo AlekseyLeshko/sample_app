@@ -6,5 +6,5 @@ rvm:
 
 deploy:
   provider: heroku
-  app: frightful-springs-5980
+  app: mysterious-bastion-5492
   api_key: d75dc036-e1dc-4746-9faf-7e0c71eaf6cf
